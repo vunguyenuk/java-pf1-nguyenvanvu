@@ -3,9 +3,7 @@ package Extend.HeCacDoiTuongHinhHoc;
 public class Circle extends Shape {
     public double radius;
 
-    Circle(){
-        this.radius = 1.0;
-    }
+    Circle(){}
 
     Circle(double radius){
         this.radius = radius;
