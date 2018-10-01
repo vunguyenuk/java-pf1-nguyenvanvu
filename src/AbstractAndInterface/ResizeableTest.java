@@ -22,9 +22,6 @@ public class ResizeableTest {
 
         System.out.println("Sau khi tang: ");
         for(int i = 0; i < shapes.length; i++){
-            if(shapes[i] instanceof Resizeable){
-                System.out.println("phan tu thu " + i + " = " + shapes[i]);
-            }
 
         }
     }
