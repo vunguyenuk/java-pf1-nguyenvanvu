@@ -9,7 +9,7 @@ public class Cake {
         this.rate = rate;
     }
 
-    public double calcPrice(){
+    public double priceCalculation(){
         return -1;
     };
 

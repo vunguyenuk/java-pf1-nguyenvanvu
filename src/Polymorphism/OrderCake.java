@@ -8,8 +8,13 @@ public class OrderCake extends Cake{
         this.weight = weight;
     }
 
+    @Override
     public double priceCalculation(){
         return rate*weight;
+    }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\t" + weight;
     }
 }

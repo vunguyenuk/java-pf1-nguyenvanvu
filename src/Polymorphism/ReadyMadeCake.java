@@ -8,7 +8,13 @@ public class ReadyMadeCake extends Cake {
         this.quantity = quantity;
     }
 
+    @Override
     public double priceCalculation(){
         return rate * quantity;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +  "\t" + quantity;
     }
 }
