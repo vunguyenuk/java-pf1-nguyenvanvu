@@ -12,7 +12,10 @@ public class CakeTest {
 //       cakeManager.add(new ReadyMadeCake("banh pizza", 4, 2));
        cakeManager.show();
         System.out.println(cakeManager.getCakes().length);
-        System.out.println(cakeManager.calcTotalPrice());
+        System.out.println("Sum of cakes price: " + cakeManager.calcTotalPrice());
+        System.out.println("Sum of readyMakeCake price: " + cakeManager.calcTotalPriceOfReadyMadeCake());
+        System.out.println("Sum of readyMakeCake quantity: " + cakeManager.calcTotalQuantityReadyMadeCake());
+        cakeManager.showInforCakeOfHeight();
     }
 
 
