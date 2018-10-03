@@ -37,10 +37,8 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public String toString() {
-        return "A Circle with radius="
-                + getRadius()
-                + ", which is a subclass of "
-                + super.toString();
+        return " Circle " + super.toString() + "\t" + getArea();
+
     }
 
     public void howToColor() {
@@ -48,7 +46,14 @@ public class Circle extends Shape implements Resizeable {
     }
 
     @Override
+    public String getName() {
+        return "Circle";
+    }
+
+    @Override
     public void resize(double percent) {
         System.out.println("ti le phan tram Circle la: " +  (getArea() * percent) / 100.0);
     }
+
+
 }

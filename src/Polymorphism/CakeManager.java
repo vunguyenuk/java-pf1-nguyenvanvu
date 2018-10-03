@@ -1,5 +1,7 @@
 package Polymorphism;
 
+import java.util.Arrays;
+
 public class CakeManager {
     private Cake[] cakes;
     private int number, top;
@@ -22,14 +24,15 @@ public class CakeManager {
             cakes[top] = cake;
             top++;
         } else {
-            Cake[] cakes1 = new Cake[number + 10];
-            for (int i = 0;i < number;i++){
-                cakes1[i] = cakes[i];
+            Cake[] cakes2 = new Cake[number + 1];
+            //Gan nhung phan tu truoc do cho mang moi
+            for (int i = 0; i < number; i++){
+                cakes2[i] = cakes[i];
             }
-            number += 10;
-            cakes1[top] = cake;
+
+            cakes2[top] = cake;
             top++;
-            cakes = cakes1;
+            cakes = cakes2;
         }
 
     }

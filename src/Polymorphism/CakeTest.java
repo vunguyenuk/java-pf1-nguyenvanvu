@@ -9,9 +9,9 @@ public class CakeTest {
        cakeManager.add(new OrderCake("banh tiramisu", 2, 4));
        cakeManager.add(new ReadyMadeCake("banh flan", 3,1));
        cakeManager.add(new ReadyMadeCake("banh pia", 3, 2));
-       //cakeManager.add(new ReadyMadeCake("banh pizza", 4, 2));
+//       cakeManager.add(new ReadyMadeCake("banh pizza", 4, 2));
        cakeManager.show();
-
+        System.out.println(cakeManager.getCakes().length);
         System.out.println(cakeManager.calcTotalPrice());
     }
 

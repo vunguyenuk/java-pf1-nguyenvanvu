@@ -32,6 +32,8 @@ public class Rectangle extends Shape implements Resizeable {
         return width * height;
     }
 
+
+
     public double getPerimeter() {
         return 2 * (width + height);
     }
@@ -43,5 +45,15 @@ public class Rectangle extends Shape implements Resizeable {
     @Override
     public void resize(double percent) {
         System.out.println((getArea() * percent)/100.0);
+    }
+
+    @Override
+    public String getName() {
+        return "Rectangle";
+    }
+
+    @Override
+    public String toString() {
+        return " Rectangle " + super.toString() + "\t" + getArea();
     }
 }

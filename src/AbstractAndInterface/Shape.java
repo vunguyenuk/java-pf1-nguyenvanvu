@@ -37,4 +37,6 @@ abstract class Shape {
      * Abstract method getArea
      */
     public abstract double getArea();
+
+    public abstract String getName();
 }

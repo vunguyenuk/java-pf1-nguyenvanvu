@@ -1,28 +1,23 @@
 package AbstractAndInterface;
 
-import java.util.Random;
-import java.util.Scanner;
-
 public class ResizeableTest {
     public static void main(String[] args) {
-        int max = 100;
-        int min = 1;
-        double random = Math.random()+ 99 + 1;
+        ResizeableManager resizeableManager = new ResizeableManager(3);
+        resizeableManager.Add(new Circle(2.2));
+        resizeableManager.Add(new Rectangle(4.2, 5.4));
+        resizeableManager.Add(new Square(3.4));
+        resizeableManager.show();
 
-        Shape[] shapes = {
-                new Rectangle(2.5,2),
-                new Square(2),
-                new Circle(2)
-        };
+        System.out.println("\n");
+        System.out.println("----Size not changed-----");
+        resizeableManager.getSize(new Circle(1.2));
+        resizeableManager.getSize(new Rectangle(2.4,3.2));
+        resizeableManager.getSize(new Square(4.5));
 
-        System.out.println("Truoc khi tang: ");
-        for(int i = 0; i < shapes.length; i++){
-            System.out.println("phan tu thu " + i + " = " + shapes[i].getArea());
-        }
-
-        System.out.println("Sau khi tang: ");
-        for(int i = 0; i < shapes.length; i++){
-
-        }
+        System.out.println("\n");
+        System.out.println("----Size Changed!!!----");
+        resizeableManager.random(new Circle(1.2));
+        resizeableManager.random(new Rectangle(2.4,3.2));
+        resizeableManager.random(new Square(4.5));
     }
 }

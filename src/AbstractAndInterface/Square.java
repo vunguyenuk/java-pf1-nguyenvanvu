@@ -32,5 +32,15 @@ public class Square extends Shape implements Colorable,Resizeable {
     public void resize(double percent) {
         System.out.println(getSide() * percent /100.0);
     }
+
+    @Override
+    public String getName() {
+        return "Square";
+    }
+
+    @Override
+    public String toString() {
+        return " Square " + super.toString() + " \t " + getArea();
+    }
 }
 
