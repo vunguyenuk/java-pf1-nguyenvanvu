@@ -1,6 +1,6 @@
 package AbstractAndInterface;
 
-abstract class Shape {
+public abstract class Shape {
     private String color = "green";
     private boolean filled = true;
 
@@ -39,4 +39,5 @@ abstract class Shape {
     public abstract double getArea();
 
     public abstract String getName();
+
 }

@@ -1,4 +1,7 @@
-package AbstractAndInterface;
+package AbstractAndInterface.CircleComparator;
+
+import AbstractAndInterface.Resizeable;
+import AbstractAndInterface.Shape;
 
 public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;

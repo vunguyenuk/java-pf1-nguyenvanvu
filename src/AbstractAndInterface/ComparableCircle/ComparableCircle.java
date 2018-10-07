@@ -1,4 +1,6 @@
-package AbstractAndInterface;
+package AbstractAndInterface.ComparableCircle;
+
+import AbstractAndInterface.CircleComparator.Circle;
 
 public class ComparableCircle extends Circle
         implements Comparable<ComparableCircle> {

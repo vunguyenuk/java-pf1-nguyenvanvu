@@ -1,5 +1,7 @@
 package AbstractAndInterface;
 
+import AbstractAndInterface.Colorable.Colorable;
+
 public class Square extends Shape implements Colorable,Resizeable {
     public double side;
 

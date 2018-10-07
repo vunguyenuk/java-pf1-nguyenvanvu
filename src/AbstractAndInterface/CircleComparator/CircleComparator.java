@@ -1,4 +1,4 @@
-package AbstractAndInterface;
+package AbstractAndInterface.CircleComparator;
 
 import java.util.Comparator;
 

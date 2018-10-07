@@ -1,5 +1,10 @@
-package AbstractAndInterface;
+package AbstractAndInterface.Colorable;
 
+
+import AbstractAndInterface.CircleComparator.Circle;
+import AbstractAndInterface.Rectangle;
+import AbstractAndInterface.Shape;
+import AbstractAndInterface.Square;
 
 public class ColorableTest {
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package AbstractAndInterface;
 
+import AbstractAndInterface.CircleComparator.Circle;
+
 public class ResizeableTest {
     public static void main(String[] args) {
         ResizeableManager resizeableManager = new ResizeableManager(3);

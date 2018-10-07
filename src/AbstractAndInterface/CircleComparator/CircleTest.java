@@ -1,4 +1,4 @@
-package AbstractAndInterface;
+package AbstractAndInterface.CircleComparator;
 
 public class CircleTest {
     public static void main(String[] args) {
