@@ -4,7 +4,7 @@ import AbstractAndInterface.CircleComparator.Circle;
 
 public class ResizeableTest {
     public static void main(String[] args) {
-        ResizeableManager resizeableManager = new ResizeableManager(3);
+        ResizeableManager resizeableManager = new ResizeableManager(5);
         resizeableManager.Add(new Circle(2.2));
         resizeableManager.Add(new Rectangle(4.2, 5.4));
         resizeableManager.Add(new Square(3.4));
