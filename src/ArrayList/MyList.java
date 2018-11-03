@@ -4,10 +4,10 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MyList<E> {
+public class MyList<E> implements Cloneable{
     int size = 0;
     static int DEFAULT_CAPACITY = 10;
-    int count = 0;
+    int count = 0; //su dung cai nay de tranh ConcurrentModificationException()
     Object elements[];
 
     public MyList() {
@@ -18,24 +18,34 @@ public class MyList<E> {
         if(index < 0 || index > size){
             throw new IndexOutOfBoundsException("index khong hop le");
         }
-        ensureCapacity();
+        ensureCapacity(10);
         System.arraycopy(elements, index, elements, index + 1,size-index);
         elements[index] = element;
         size++;
     }
 
-    public void ensureCapacity() {
-        int newSize = elements.length * 2;
-        elements = Arrays.copyOf(elements, newSize);
+    public void ensureCapacity(int minCapacity) {
+        if(minCapacity > elements.length){
+            int newCapacity = (elements.length * 2) + 2;
+            if(newCapacity - minCapacity < 0){
+                newCapacity = minCapacity;
+            }
+            if(newCapacity < 0){
+                if(minCapacity < 0){
+                    throw new OutOfMemoryError("Ra ngoai bo nho");
+                }
+                newCapacity = Integer.MAX_VALUE;
+            }
+            elements = Arrays.copyOf(elements, newCapacity);
+
+        }
     }
 
     public Object remove(int index){
         if (index >= size){
             throw new IndexOutOfBoundsException("Tran bo nho");
         }
-        count++;
         Object oldValue = elements[index];
-
         int numMoved = size - index - 1;
         if(numMoved > 0){
             System.arraycopy(elements, index + 1, elements, index, numMoved);
@@ -80,7 +90,7 @@ public class MyList<E> {
     }
 
     public boolean add(E e){
-        ensureCapacity();
+        ensureCapacity(10);
         elements[size++] = e;
         return true;
     }
@@ -101,5 +111,16 @@ public class MyList<E> {
             elements[i] = null;
         }
         size = 0;
+    }
+
+    public void show() {
+        for (Object ob : elements) {
+            if (ob == null) {
+                System.out.println("Chua dien vao");
+
+            } else {
+                System.out.println(ob);
+            }
+        }
     }
 }
