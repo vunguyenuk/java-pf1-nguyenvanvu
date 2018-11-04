@@ -101,6 +101,7 @@ public class MyList<E> implements Cloneable{
         if (i>= size || i <0) {
             throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i );
         }
+
         return (E) elements[i];
     }
 
