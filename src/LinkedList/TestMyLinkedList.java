@@ -3,7 +3,7 @@ package LinkedList;
 public class TestMyLinkedList {
     public static void main(String[] args) {
         System.out.println("/=/=/=/= TESTING /=/=/=/=");
-        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>(), copy = new MyLinkedList <Integer>();
 
         myLinkedList.add(0,9);
         myLinkedList.add(1,19);
@@ -13,9 +13,17 @@ public class TestMyLinkedList {
 
         myLinkedList.addFirst(10);
         myLinkedList.addLast(11);
+
+        System.out.println(myLinkedList.indexOf(9));
         System.out.println("Get First: " + myLinkedList.getFirst());
         System.out.println("Get Last: " + myLinkedList.getLast());
 
         myLinkedList.printList();
+
+        System.out.println(myLinkedList.contains(21));
+
+        System.out.println("Danh sach da clone");
+        myLinkedList.clone(copy);
+        copy.printList();
     }
 }
