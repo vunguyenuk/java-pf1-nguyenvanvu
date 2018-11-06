@@ -3,13 +3,19 @@ package LinkedList;
 public class TestMyLinkedList {
     public static void main(String[] args) {
         System.out.println("/=/=/=/= TESTING /=/=/=/=");
-        MyLinkedList ll = new MyLinkedList(10);
-        ll.addFirst(11);
-        ll.addFirst(12);
-        ll.addFirst(13);
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
 
-        ll.add(4,9);
-        ll.add(4,9);
-        ll.printList();
+        myLinkedList.add(0,9);
+        myLinkedList.add(1,19);
+
+        myLinkedList.add(2,21);
+        myLinkedList.add(3,22);
+
+        myLinkedList.addFirst(10);
+        myLinkedList.addLast(11);
+        System.out.println("Get First: " + myLinkedList.getFirst());
+        System.out.println("Get Last: " + myLinkedList.getLast());
+
+        myLinkedList.printList();
     }
 }
