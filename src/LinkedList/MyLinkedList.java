@@ -30,7 +30,7 @@ public class MyLinkedList<E>{
         Node node = new Node(data);
       if(index < 0 || index > numNodes){
           throw new IllegalArgumentException("index was out of bounds");
-      } else if(head == null){
+      } else if(head == null || numNodes == 0){
           head = node;
       } else if(index == 0){
           node.next = head;
