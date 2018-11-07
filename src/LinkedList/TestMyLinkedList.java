@@ -24,6 +24,7 @@ public class TestMyLinkedList {
         System.out.println("get " + myLinkedList.get(2));
         System.out.println(myLinkedList.contains(21));
 
+
         System.out.println("Danh sach da clone");
         myLinkedList.clone(copy);
         copy.printList();
