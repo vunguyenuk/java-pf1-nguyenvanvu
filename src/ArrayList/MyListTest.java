@@ -14,7 +14,7 @@ public class MyListTest {
         System.out.println("------------------lay kich thuoc mang---------------");
         System.out.println(myList.size());
         System.out.println("-------------Gia tri xoa------------------");
-        System.out.println(myList.remove(2));
+        System.out.println("remove" + myList.remove(2));
         System.out.println("---------Danh sach cac phan tu trong mang------------");
         myList.show();
         System.out.println("----------Clone phan tu trong mang---------------------");

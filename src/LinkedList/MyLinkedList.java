@@ -81,25 +81,24 @@ public class MyLinkedList<E>{
     }
 
     public E remove(int index){
-        if(head == null || numNodes == 0){
-            throw new NoSuchElementException("No such Element To remove");
-        }
+        Node node, current = head;
         if(index < 0 || index >= numNodes){
-            throw new IndexOutOfBoundsException("out of rank");
+            throw new IndexOutOfBoundsException("Nobody things to remove");
         }
         if(index == 0){
-            E element = (E)head.data;
+            node = head;
             head = head.next;
-            return element;
+            node.next = null;
         }else{
-            Node current = head;
             for(int i = 0; i < index - 1; i++){
                 current = current.next;
             }
-            E element = (E)current.next.data;
-            current.next = current.next.next;
-            return element;
+            node = current.next;
+            current.next = node.next;
+            node.next = null;
         }
+        numNodes--;
+        return (E) node.getData();
     }
 
 
@@ -109,11 +108,8 @@ public class MyLinkedList<E>{
 
     public int indexOf(E e) {
        Node pointer = head;
-       if(head == null || numNodes == 0) {
+       if(pointer == null || numNodes == 0) {
            add(e);
-       }
-       if(pointer == null){
-           throw new IllegalArgumentException("This head is null, not value to get");
        } else {
            for(int i = 0; i < numNodes; i++){
                if(pointer.getData().equals(e)){
@@ -129,13 +125,14 @@ public class MyLinkedList<E>{
 
     public E get(int index) {
         if(index < 0 || index >= numNodes){
-            throw new IndexOutOfBoundsException("out of rank");
+            throw new IndexOutOfBoundsException("nobody things to get");
+        }else{
+            Node node = head;
+            for(int i = 0; i < index; i++){
+                node = node.next;
+            }
+            return (E) node.data;
         }
-        Node node = head;
-        for(int i = 0; i < index; i++){
-            node = node.next;
-        }
-        return (E) node.data;
     }
 
     public E getFirst(){
@@ -182,7 +179,7 @@ public class MyLinkedList<E>{
     public E clone(MyLinkedList<E> list){
         Node current = head;
         if(current == null || numNodes == 0){
-            throw new NoSuchElementException("Danh sach rong");
+            throw new NoSuchElementException("This list is empty");
         }else{
             for(int i = 0; i < numNodes; i++){
                 list.addLast((E) current.data);
@@ -207,11 +204,17 @@ public class MyLinkedList<E>{
         }
         return false;
     }
+
     public void printList() {
         Node temp = head;
-        while(temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
+        if(temp.next == null){
+            System.out.println(head.data + " ");
+        }else {
+            while(temp != null) {
+                System.out.println(temp.data + " ");
+                temp = temp.next;
+            }
+            System.out.println("");
         }
     }
 }

@@ -20,6 +20,8 @@ public class TestMyLinkedList {
 
         myLinkedList.printList();
 
+        System.out.println("remove:" + myLinkedList.remove(2));
+        System.out.println("get " + myLinkedList.get(2));
         System.out.println(myLinkedList.contains(21));
 
         System.out.println("Danh sach da clone");
