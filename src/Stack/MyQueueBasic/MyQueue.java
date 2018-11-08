@@ -1,4 +1,4 @@
-package Stack;
+package Stack.MyQueueBasic;
 
 public class MyQueue {
     private int capacity;

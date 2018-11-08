@@ -1,4 +1,4 @@
-package Stack;
+package Stack.MyQueueBasic;
 
 public class QueueClient {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Stack;
+package Stack.GenericStack;
 
 import java.util.EmptyStackException;
 import java.util.LinkedList;

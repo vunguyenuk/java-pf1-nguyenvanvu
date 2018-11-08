@@ -1,4 +1,4 @@
-package Stack;
+package Stack.GenericStack;
 
 public class GenericStackClient {
     public static void StackOfString(){

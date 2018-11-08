@@ -1,4 +1,4 @@
-package Stack;
+package Stack.MyStackBasic;
 
 public class MyStack {
     int size;
