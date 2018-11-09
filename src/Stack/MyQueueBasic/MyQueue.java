@@ -33,7 +33,7 @@ public class MyQueue {
             System.out.println("Overflow ! Unable to add element: " + item);
         }else{
             tail++;
-            if(tail == capacity - 1){
+            if(tail == capacity){
                 tail = 0;
             }
             queueArr[tail] = item;

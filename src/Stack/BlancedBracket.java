@@ -2,32 +2,25 @@ package Stack;
 
 public class BlancedBracket {
 
-      public static class stack
-        {
+      public static class stack {
             int top=-1;
             char items[] = new char[100];
 
-           public void push(char x)
-            {
-                if (top == 99)
-                {
+           public void push(char x) {
+                if (top == 99) {
                     System.out.println("Stack full");
                 }
-                else
-                {
+                else {
                     items[++top] = x;
                 }
             }
 
-            public char pop()
-            {
-                if (top == -1)
-                {
+            public char pop() {
+                if (top == -1) {
                     System.out.println("Underflow error");
                     return '\0';
                 }
-                else
-                {
+                else {
                     char element = items[top];
                     top--;
                     return element;
@@ -42,8 +35,7 @@ public class BlancedBracket {
 
         /* Returns true if character1 and character2
            are matching left and right Parenthesis */
-        static boolean isMatchingPair(char character1, char character2)
-        {
+        static boolean isMatchingPair(char character1, char character2) {
             if (character1 == '(' && character2 == ')')
                 return true;
             else if (character1 == '{' && character2 == '}')
@@ -54,64 +46,35 @@ public class BlancedBracket {
                 return false;
         }
 
-        /* Return true if expression has balanced
-           Parenthesis */
-       public static boolean areParenthesisBalanced(char exp[])
-        {
-            /* Declare an empty character stack */
+
+       public static boolean areParenthesisBalanced(char exp[]) {
             stack st = new stack();
 
-       /* Traverse the given expression to
-          check matching parenthesis */
-            for(int i = 0 ; i < exp.length; i++)
-            {
-
-          /*If the exp[i] is a starting
-            parenthesis then push it*/
+            for(int i = 0 ; i < exp.length; i++) {
                 if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
                     st.push(exp[i]);
 
-          /* If exp[i] is an ending parenthesis
-             then pop from stack and check if the
-             popped parenthesis is a matching pair*/
-                if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']')
-                {
-
-              /* If we see an ending parenthesis without
-                 a pair then return false*/
-                    if (st.isEmpty())
-                    {
+                if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
+                    if (st.isEmpty()) {
                         return false;
                     }
 
-             /* Pop the top element from stack, if
-                it is not a pair parenthesis of character
-                then there is a mismatch. This happens for
-                expressions like {(}) */
-                    else if ( !isMatchingPair(st.pop(), exp[i]) )
-                    {
+                    else if ( !isMatchingPair(st.pop(), exp[i]) ) {
                         return false;
                     }
                 }
-
             }
-
-       /* If there is something left in expression
-          then there is a starting parenthesis without
-          a closing parenthesis */
 
             if (st.isEmpty())
                 return true; /*balanced*/
-            else
-            {   /*not balanced*/
+            else {   /*not balanced*/
                 return false;
             }
         }
 
    
-        public static void main(String[] args)
-        {
-            char exp[] = {'{','(',')','}','[',']'};
+        public static void main(String[] args) {
+            char exp[] = "s * (s – a) * s – b) * (s – c)".toCharArray();
             if (areParenthesisBalanced(exp))
                 System.out.println("Balanced ");
             else
