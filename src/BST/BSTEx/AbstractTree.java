@@ -1,8 +1,7 @@
-package BST;
+package BST.BSTEx;
 
 public abstract class AbstractTree<E> implements Tree<E> {
     @Override
-    public void inOrder(){
+    public void inOrder(){ }
 
-    }
 }

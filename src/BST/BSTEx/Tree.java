@@ -1,4 +1,4 @@
-package BST;
+package BST.BSTEx;
 
 public interface Tree<E> {
     public boolean insert(E e);

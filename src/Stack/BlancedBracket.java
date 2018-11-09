@@ -2,7 +2,7 @@ package Stack;
 
 public class BlancedBracket {
 
-      public static class Stack
+      public static class stack
         {
             int top=-1;
             char items[] = new char[100];
@@ -59,7 +59,7 @@ public class BlancedBracket {
        public static boolean areParenthesisBalanced(char exp[])
         {
             /* Declare an empty character stack */
-            Stack st = new Stack();
+            stack st = new stack();
 
        /* Traverse the given expression to
           check matching parenthesis */
