@@ -21,9 +21,12 @@ public class TreeMapEx {
         }
 
         //print result
+
         for(String word : treeMap.keySet()){
               System.out.println("word '" + word + "' appear: " + treeMap.get(word) + " round");
         }
+
+
     }
 }
 

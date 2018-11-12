@@ -34,11 +34,10 @@ public class TestMap {
         linkedHashMap.put("Hop",25);
         System.out.println("Display entries linkedHashMap");
         System.out.println(linkedHashMap + "\n");
-        System.out.println("\nThe age for" + " Lewis is " + linkedHashMap.get("Lewis"));
 
         //TreeNode
         Map<String, Integer> treeMap = new TreeMap<>(hashMap);
-        System.out.println("\nDisplay entries in ascending order of key");
+        System.out.println("Display entries in ascending order of key");
         System.out.println(treeMap);
     }
 }
