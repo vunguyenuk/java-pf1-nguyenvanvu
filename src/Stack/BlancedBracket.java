@@ -33,8 +33,6 @@ public class BlancedBracket {
             }
         }
 
-        /* Returns true if character1 and character2
-           are matching left and right Parenthesis */
         static boolean isMatchingPair(char character1, char character2) {
             if (character1 == '(' && character2 == ')')
                 return true;
@@ -48,24 +46,24 @@ public class BlancedBracket {
 
 
        public static boolean areParenthesisBalanced(char exp[]) {
-            stack st = new stack();
+            stack stack = new stack();
 
             for(int i = 0 ; i < exp.length; i++) {
                 if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
-                    st.push(exp[i]);
+                    stack.push(exp[i]);
 
                 if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
-                    if (st.isEmpty()) {
+                    if (stack.isEmpty()) {
                         return false;
                     }
 
-                    else if ( !isMatchingPair(st.pop(), exp[i]) ) {
+                    else if ( !isMatchingPair(stack.pop(), exp[i]) ) {
                         return false;
                     }
                 }
             }
 
-            if (st.isEmpty())
+            if (stack.isEmpty())
                 return true; /*balanced*/
             else {   /*not balanced*/
                 return false;
@@ -74,7 +72,7 @@ public class BlancedBracket {
 
    
         public static void main(String[] args) {
-            char exp[] = "s * (s – a) * s – b) * (s – c)".toCharArray();
+            char exp[] = "s * (s – a) * (s – b) * (s – c)".toCharArray();
             if (areParenthesisBalanced(exp))
                 System.out.println("Balanced ");
             else
