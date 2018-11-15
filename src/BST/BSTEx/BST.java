@@ -135,7 +135,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
                 }
             }
         } else {
-            //Case 2
+            //Case 2: Current has left children
             TreeNode<E> parentOfRightMost = current;
             TreeNode<E> rightMost = current.left;
 

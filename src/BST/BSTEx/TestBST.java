@@ -19,7 +19,7 @@ public class TestBST {
         System.out.println("Searching is found " + tree.searchTree("Hop"));
         System.out.println("The number of nodes: " + tree.getSize());
 
-        System.out.println("Status deleted: " + tree.delete("Ha"));
+        System.out.println("Status deleted: " + tree.delete("Hop"));
         System.out.println("Inorder again (sorted): ");
         tree.inOrder();
     }
