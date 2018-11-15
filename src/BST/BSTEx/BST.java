@@ -1,5 +1,9 @@
 package BST.BSTEx;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BST<E extends Comparable<E>> extends AbstractTree<E>{
     protected TreeNode<E> root;
     protected int size = 0;
@@ -57,7 +61,44 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
         inOrder(root);
     }
 
-    protected void inOrder(TreeNode<E> root){
+    public void inOrderNonRecursion(TreeNode<E> root){
+        Stack<TreeNode<E>> stack = new Stack<>();
+
+        if(root == null) return;
+
+        while (true){
+             if(root != null){
+                stack.push(root);
+                root = root.left;
+            } else {
+                 if(stack.isEmpty()){
+                     break;
+                 }
+                 root = stack.pop();
+                 System.out.println(root.element + " ");
+                 root = root.right;
+             }
+        }
+    }
+
+    public void breadth(TreeNode<E> root){
+        Queue<TreeNode<E>> queue = new LinkedList<>();
+
+        if(root == null){
+            return;
+        }
+        queue.clear();
+        queue.add(root);
+        while (!queue.isEmpty()){
+            TreeNode<E> node = queue.remove();
+            System.out.println(node.element + " ");
+            if(node.left != null) queue.add(node.left);
+            if(node.right != null) queue.add(node.right);
+        }
+    }
+
+
+    public void inOrder(TreeNode<E> root){
         if(root == null) return;
         inOrder(root.left);
         System.out.println(root.element + " ");
@@ -82,13 +123,15 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
         if(node == null){
             return;
         }
-        //Duyet sang trai
         printPostOrder(node.left);
 
-        //Duyet sang phai
         printPostOrder(node.right);
 
         System.out.println(node.element + " ");
+    }
+
+    public void postOrderNotRecursive(){
+
     }
 
     public void printPreOrder(TreeNode<E> node){
@@ -97,10 +140,8 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
         }
         System.out.println(node.element + " ");
 
-        //Duyet sang trai
         printPreOrder(node.left);
 
-        //Duyet sang phai
         printPreOrder(node.right);
     }
 
