@@ -1,4 +1,4 @@
-package SearchAlgorithms;
+package SearchAlgorithms.HomeWork;
 
 import java.util.ArrayList;
 import java.util.Scanner;
