@@ -87,10 +87,9 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E>{
         if(root == null){
             return;
         }
-        queue.clear();
         queue.add(root);
         while (!queue.isEmpty()){
-            TreeNode<E> node = queue.remove();
+            TreeNode<E> node = queue.remove(); //lay phan tu giong pop nhung xoa no trong linkedlist
             System.out.println(node.element + " ");
             if(node.left != null) queue.add(node.left);
             if(node.right != null) queue.add(node.right);

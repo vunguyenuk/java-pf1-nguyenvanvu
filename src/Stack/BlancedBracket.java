@@ -1,37 +1,8 @@
 package Stack;
 
+import java.util.Stack;
+
 public class BlancedBracket {
-
-      public static class stack {
-            int top=-1;
-            char items[] = new char[100];
-
-           public void push(char x) {
-                if (top == 99) {
-                    System.out.println("Stack full");
-                }
-                else {
-                    items[++top] = x;
-                }
-            }
-
-            public char pop() {
-                if (top == -1) {
-                    System.out.println("Underflow error");
-                    return '\0';
-                }
-                else {
-                    char element = items[top];
-                    top--;
-                    return element;
-                }
-            }
-
-            public boolean isEmpty()
-            {
-                return (top == -1) ? true : false;
-            }
-        }
 
         static boolean isMatchingPair(char character1, char character2) {
             if (character1 == '(' && character2 == ')')
@@ -46,7 +17,7 @@ public class BlancedBracket {
 
 
        public static boolean areParenthesisBalanced(char exp[]) {
-            stack stack = new stack();
+            Stack stack = new Stack();
 
             for(int i = 0 ; i < exp.length; i++) {
                 if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
@@ -57,7 +28,7 @@ public class BlancedBracket {
                         return false;
                     }
 
-                    else if ( !isMatchingPair(stack.pop(), exp[i]) ) {
+                    else if ( !isMatchingPair((Character) stack.pop(), exp[i]) ) {
                         return false;
                     }
                 }

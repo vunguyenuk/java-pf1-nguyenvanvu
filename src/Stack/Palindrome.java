@@ -19,7 +19,7 @@ public class Palindrome {
         String reverseString = "";
 
         while (!queue.isEmpty()) {
-            reverseString = reverseString+queue.remove();
+            reverseString = reverseString + queue.remove();
         }
         if (inputString.equals(reverseString))
             System.out.println("The input String is a palindrome.");

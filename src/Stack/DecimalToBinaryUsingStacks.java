@@ -17,8 +17,9 @@ public class DecimalToBinaryUsingStacks
         while (num != 0)
         {
             int d = num % 2;
-            stk.push(d);
             num /= 2;
+            stk.push(d);
+
         }
         /* Print Binary equivalent */
         System.out.print("\nBinary equivalent = ");
