@@ -1,37 +1,33 @@
 package SearchAlgorithms.HomeWork;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.LinkedList;
 
 public class LongestConsecutive {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a string: ");
-        String input = sc.nextLine();
+        LinkedList<Character> max = new LinkedList<>();
+        LinkedList<Character> list = new LinkedList<>();
 
-        ArrayList<Character> arrayList = new ArrayList();
+        String string = "abcabcdgabxy";
 
-        for (int i = 0; i < input.length(); i++) {
-            ArrayList<Character> list = new ArrayList<>();
-            list.add(input.charAt(i));
-
-            for(int j = i + 1; j < input.length(); j++) {
-                if(input.charAt(j) > list.get(list.size() - 1)) {
-                    list.add(input.charAt(j));
-                }
+        int i = 0;
+        while (i < string.length()) {
+            if (list.size() > 1 && string.charAt(i) <= list.getLast() && list.contains(string.charAt(i))) {
+                list.clear();
             }
 
-            if (list.size() > arrayList.size()) {
-                arrayList.clear();
-                arrayList.addAll(list);
+            list.add(string.charAt(i));
+
+            if (list.size() > max.size()) {
+                max.clear();
+                max.addAll(list);
             }
-            list.clear();
+            i++;
         }
 
-        for (int i = 0; i < arrayList.size(); i++) {
-            System.out.print(arrayList.get(i));
+        for (int j = 0; j < max.size(); j++) {
+            System.out.print(max.get(j));
         }
-
+        System.out.println();
     }
 }
