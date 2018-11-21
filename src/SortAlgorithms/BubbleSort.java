@@ -1,7 +1,6 @@
-package Arrays;
+package SortAlgorithms;
 
-class BubbleSort
-{
+public class BubbleSort {
     void bubbleSort(int arr[])
     {
         int n = arr.length;
@@ -37,4 +36,3 @@ class BubbleSort
         ob.printArray(arr);
     }
 }
-
