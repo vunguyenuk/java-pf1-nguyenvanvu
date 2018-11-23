@@ -10,7 +10,7 @@ public class SumOfElementInArray {
                 }
                 sum = num[i] + num[j];
                 if(sum == value){
-                    System.out.println("gia tri cua " + value + " co so lan lap " + count + " la: " + num[i] + " + " + num[j]);
+                    System.out.println("giá trị " + value + " có số lần lặp " + count + " trên tổng hai số là: " + num[i] + " + " + num[j]);
                 }
             }
         }
