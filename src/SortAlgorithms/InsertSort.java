@@ -5,7 +5,7 @@ package SortAlgorithms;
 * */
 public class InsertSort {
     public static void main(String[] args) {
-        int[] array = {2, 1, 11, 4, 5, 9,23, 46, 32, 58};
+        int[] array = {7, 2, 1, 11, 4, 5, 9, 23, 46, 32, 58};
         sort(array);
 
 
@@ -15,7 +15,7 @@ public class InsertSort {
     }
 
     public static void sort(int[] array){
-        for(int i = 1; i < array.length; i++){
+        for(int i = 0; i < array.length; i++){
             int index = i;
             while (index > 0 && array[index - 1] > array[index]){
                 //swap

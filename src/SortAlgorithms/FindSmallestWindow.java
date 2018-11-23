@@ -14,16 +14,16 @@ public class FindSmallestWindow {
     }
 
     public static String minWindow(String s, String t) {
-        if(t.length()>s.length())
+        if(t.length() > s.length())
             return "";
         String result = "";
 
         //character counter for t
         HashMap<Character, Integer> target = new HashMap<Character, Integer>();
-        for(int i=0; i<t.length(); i++){
+        for(int i=0; i < t.length(); i++){
             char c = t.charAt(i);
             if(target.containsKey(c)){
-                target.put(c,target.get(c)+1);
+                target.put(c,target.get(c) + 1);
             }else{
                 target.put(c,1);
             }
@@ -32,21 +32,21 @@ public class FindSmallestWindow {
         // character counter for s
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int left = 0;
-        int minLen = s.length()+1;
+        int minLen = s.length() + 1;
 
         int count = 0; // the total of mapped characters
 
-        for(int i=0; i<s.length(); i++){
+        for(int i=0; i < s.length(); i++){
             char c = s.charAt(i);
 
             if(target.containsKey(c)){
                 if(map.containsKey(c)){
-                    if(map.get(c)<target.get(c)){
+                    if(map.get(c) < target.get(c)){
                         count++;
                     }
-                    map.put(c,map.get(c)+1);
+                    map.put(c, map.get(c)+1);
                 }else{
-                    map.put(c,1);
+                    map.put(c, 1);
                     count++;
                 }
             }
@@ -66,7 +66,6 @@ public class FindSmallestWindow {
                 }
             }
         }
-
         return result;
     }
 

@@ -29,7 +29,7 @@ public class InsertSortIllutration {
             int index = i;
             while (index > 0 && array[index - 1] > array[index]){
                 //swap
-                System.out.println("\nswap element: " + array[index] + " with " + array[index - 1]);
+                System.out.println("\nSwap element: " + array[index] + " with " + array[index - 1]);
                 int temp = array[index];
                 array[index] = array[index - 1];
                 array[index - 1] = temp;
