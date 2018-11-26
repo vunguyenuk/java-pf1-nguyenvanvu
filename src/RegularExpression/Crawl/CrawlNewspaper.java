@@ -21,6 +21,7 @@ public class CrawlNewspaper {
 
             content = content.replaceAll("\\n+", "");
 
+            System.out.println(content);
             Pattern pattern = Pattern.compile("data-linktype=\"newsdetail\" .*? >(.*?)</a>");
             Matcher matcher = pattern.matcher(content);
 
