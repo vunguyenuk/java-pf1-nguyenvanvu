@@ -1,4 +1,4 @@
-package Exception.Calculator;
+package Exception;
 
 import java.util.Scanner;
 

@@ -4,7 +4,7 @@ import java.io.File;
 
 public class DuplicateCode {
     public static void main(String[] args) {
-        String filePath1 = "/home/vunv/Desktop";
+        String filePath1 = "src";
         System.out.println("Noi dung cua " + filePath1 + " la:");
         hienThiThuMuc(filePath1);
     }

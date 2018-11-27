@@ -4,8 +4,8 @@ import java.io.File;
 
 public class TestFileIO {
     public static void main(String[] args) {
-        File f = new File("/home/vunguyen/Desktop/text");
-        File dir = new File("/home/vunguyen/Desktop/books");
+        File f = new File("src/Exception/Test");
+        File dir = new File("src/Exception/books");
         dir.mkdir();
 
         if(dir.isDirectory()){
