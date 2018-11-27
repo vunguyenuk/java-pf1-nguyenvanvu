@@ -1,4 +1,4 @@
-package Baitap;
+package HomeWorkOnClass;
 
 import java.util.Random;
 
