@@ -8,12 +8,12 @@ public class RecursiveFactorial {
 
         System.out.println("Nhap n = ");
         int n = sc.nextInt();
-        giaiThuaDeQuy(n);
+        recursiveRecursion(n);
     }
 
-    public static int giaiThuaDeQuy(int n){
+    public static int recursiveRecursion(int n){
         if(n == 0)
             return  1;
-        return n * giaiThuaDeQuy(n-1);
+        return n * recursiveRecursion(n-1);
     }
 }

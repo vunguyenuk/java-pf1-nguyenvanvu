@@ -1,9 +1,9 @@
 package OOP;
 
-/*7. Viết chương trình đo thời gian
-thực thi của thuật toán sắp xếp chọn
-(selection sort) cho 100,000 số.
-Thread: luồng hay gọi là mạch*/
+/*7. Write a time program
+The implementation of the selector algorithm
+(selection sort) for 100,000 numbers.
+Thread: flow or circuit call*/
 
 
 import java.util.Date;
@@ -13,17 +13,17 @@ public class StopWatchTest {
         StopWatch stopwatch = new StopWatch();
 
         stopwatch.start();
-        System.out.println("Thoi gian hien tai lan thu 1: " + new Date());
-        System.out.println("Bat dau do tai startTime: " + stopwatch.getStartTime());
+        System.out.println("The first show time: " + new Date());
+        System.out.println("Start measuring at start time: " + stopwatch.getStartTime());
         System.out.println("pause 5s");
         doSomeThing(5);
 
         stopwatch.stop();
-        System.out.println("Thoi gian hien tai lan thu 2: " + new Date());
-        System.out.println("Dung do tai endTime: " + stopwatch.getEndTime());
-        System.out.println("Thoi gian troi qua (milisecond): " + stopwatch.getElapsedTime());
+        System.out.println("The last show time: " + new Date());
+        System.out.println("pause: " + stopwatch.getEndTime());
+        System.out.println("Time past (milisecond): " + stopwatch.getElapsedTime());
 
-        System.out.println("Thoi gian he thong luc bắt đầu đo: " + new Date(stopwatch.getStartTime()));
+        System.out.println("System time at start of measurement: " + new Date(stopwatch.getStartTime()));
 
     }
 

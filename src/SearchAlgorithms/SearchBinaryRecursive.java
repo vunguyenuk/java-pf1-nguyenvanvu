@@ -19,10 +19,10 @@ public class SearchBinaryRecursive {
     }
 
     public static void main(String[] args) {
-        System.out.println("so 43 o vi tri: " + recursiveSearch(list,0,list.length - 1,483));
-        System.out.println("so 1 o vi tri: " + recursiveSearch(list,0,list.length - 1,1));
-        System.out.println("so 3 o vi tri: " + recursiveSearch(list,0,list.length - 1,3));
-        System.out.println("so 193 o vi tri: " + recursiveSearch(list,0,list.length - 1,193));
-        System.out.println("so 54 o vi tri: " + recursiveSearch(list,0,list.length - 1,54));
+        System.out.println("number 43 is in position: " + recursiveSearch(list,0,list.length - 1,483));
+        System.out.println("number 1 is in position: " + recursiveSearch(list,0,list.length - 1,1));
+        System.out.println("number 3 is in position: " + recursiveSearch(list,0,list.length - 1,3));
+        System.out.println("number 193 is in position: " + recursiveSearch(list,0,list.length - 1,193));
+        System.out.println("number 54 is in position: " + recursiveSearch(list,0,list.length - 1,54));
     }
 }

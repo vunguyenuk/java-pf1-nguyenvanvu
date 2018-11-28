@@ -9,23 +9,23 @@ import java.util.*;
 
 public class QueueDemerging {
     public static void main(String[] args) throws IOException {
-        Queue<String> nu = new LinkedList <>();
-        Queue<String> nam = new LinkedList <>();
+        Queue<String> female = new LinkedList <>();
+        Queue<String> male = new LinkedList <>();
 
         Scanner sc = new Scanner(System.in);
 
         for(int i = 0; i < 4; i++){
-            System.out.print("Nhap ten: ");
+            System.out.print("Enter your name's: ");
             String p = sc.nextLine();
-            System.out.print("Gioi tinh: ");
+            System.out.print("Enter your sex's: ");
             String sex = sc.nextLine();
 
-            if(sex.contains("nu")){
-                nu.add(p);
-            }else if(sex.contains("nam")){
-                nam.add(p);
+            if(sex.contains("female")){
+                female.add(p);
+            }else if(sex.contains("male")){
+                male.add(p);
             }else{
-                System.out.println("Chuoi ban nhap khong hop le!");
+                System.out.println("Your String is invalid!");
                 return;
             }
         }
@@ -35,12 +35,12 @@ public class QueueDemerging {
         try{
             File file = new File("/home/vunv/Desktop/Test");
             FileWriter writer = new FileWriter(file);
-            if(nu != null && nam != null){
-                System.out.println("Nam la: " + nam);
-                writer.write(String.valueOf(nu));
-                System.out.println("Nu la: " + nu);
-                writer.write(String.valueOf(nam));
-                System.out.println("Da ghi vao file");
+            if(female != null && male != null){
+                System.out.println("male is: " + male);
+                writer.write(String.valueOf(female));
+                System.out.println("female is: " + female);
+                writer.write(String.valueOf(male));
+                System.out.println("File is write");
                 writer.close();
             }
         }catch (IOException e){

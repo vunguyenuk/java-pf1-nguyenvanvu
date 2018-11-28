@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SynmmetricalString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap chuoi doi xung: ");
+        System.out.print("Enter string's symmetry: ");
         String str = sc.nextLine();
 
         chuoiDoiXung(str);
@@ -17,21 +17,21 @@ public class SynmmetricalString {
         String cutNextStr = s.substring(s.length() - s.length() / 2);
 
         if (cutInitialStr.equals(new StringBuffer(cutNextStr).reverse().toString())) {
-            System.out.println(s + "la chuoi doi xung");
+            System.out.println(s + "is symmetry");
         } else {
-            System.out.println("Khong Doi xung");
+            System.out.println("is not symmetry");
         }
     }
 
 //    public static void main(String[] args) {
 //        Scanner ip = new Scanner(System.in);
-//        System.out.println("Nhap vo doan chuoi doi xung: ");
+//        System.out.println("Enter string's symmetry: ");
 //        String s = ip.nextLine();
 //
 //        if(isPalindrome(s)){
-//            System.out.println(s + " la chuoi doi xung");
+//            System.out.println(s + " is symmetry");
 //        }else {
-//            System.out.println("Khong phai chuoi doi xung!");
+//            System.out.println("is not symmetry!");
 //        }
 //    }
 //    public static boolean isPalindrome (String str) {

@@ -7,12 +7,12 @@ public class ConvertCTemperature {
 
     public static void fahrenheitToCelsius(double fahreheit){
         double celsius = (5.0 / 9) * (fahreheit - 32);
-        System.out.println("nhiet do tu F = " + fahreheit +" sang do C = " + celsius);
+        System.out.println("temperature from F = " + fahreheit +" to C = " + celsius);
     }
 
     public static void celsiusToFahrenheit(double celsius){
         double fahrenheit = (9.0 / 5) * (celsius + 32);
-        System.out.println("nhiet do tu C = " + celsius +" sang do F = " + fahrenheit);
+        System.out.println("temperature from  C = " + celsius +" to F = " + fahrenheit);
     }
 
 

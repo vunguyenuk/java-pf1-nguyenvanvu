@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BinaryMatrix {
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
-        System.out.print("Nhap so hang so cot: ");
+        System.out.print("Enter row's number column's number: ");
         int n = ip.nextInt();
 
         maTranNhiPhan(n);

@@ -17,11 +17,11 @@ public class RandomInt {
             for (int i = 0; i < a.length; i++) {
                 random.setSeed(i);
                 a[i] = random.nextInt(100);
-                System.out.println("so ngau nhien tu " + i + " den " + a.length + " la: " + a[i]);
+                System.out.println("random's number " + i + " to " + a.length + " is: " + a[i]);
             }
         }
 
-        System.out.print("seed hien tai co do dai la: ");
+        System.out.print("seed's length: ");
         return seed;
     }
 }

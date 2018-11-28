@@ -25,7 +25,7 @@ public class CakeManager {
             top++;
         } else {
             Cake[] cakes2 = new Cake[number + 1];
-            //Gan nhung phan tu truoc do cho mang moi
+            //Assign previous elements to the new array
             for (int i = 0; i < number; i++){
                 cakes2[i] = cakes[i];
             }
@@ -91,7 +91,7 @@ public class CakeManager {
         int i = 0;
         for (Cake cake : cakes){
             if(i < top){
-                System.out.println("banh thu " + (i + 1) + " : " + cake);
+                System.out.println("cake stuff " + (i + 1) + " : " + cake);
                 i++;
             }
 

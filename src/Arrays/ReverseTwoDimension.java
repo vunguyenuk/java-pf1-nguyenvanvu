@@ -16,12 +16,12 @@ public class ReverseTwoDimension {
 
         for(int i = 0; i < rows; i++ ){
             for(int j = 0; j < columns; j++){
-                System.out.print("Nhap hang va cot: data[" + i + "][" + j + "] = " + " ");
+                System.out.print("Enter column & r: data[" + i + "][" + j + "] = " + " ");
                 data[i][j] = input.nextInt();
             }
         }
 
-        System.out.println("In mang lan thu nhat");
+        System.out.println("show array of the first time");
 
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){
@@ -40,7 +40,7 @@ public class ReverseTwoDimension {
         }
         data = temp;
 
-        System.out.println("In mang lan thu hai ");
+        System.out.println("show array of the second time ");
 
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){

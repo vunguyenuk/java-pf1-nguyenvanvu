@@ -1,13 +1,13 @@
 package OOP;
 
 /*
-Viết chương trình thực thi như sau:
+Write the program as follows:
 
-Nhập vào 3 giá trị cho a, b, c và hiển thị kết quả dựa trên việc tính delta.
-Nếu delta >= 0, hiển thị 2 nghiệm. Nếu delta bằng 0,
-hiển thị một nghiệm (do 2 nghiệm bằng nhau).
-Còn lại hiển thị chuỗi “The equation has no roots”
-Chú ý: Sử dụng Math.pow(x, 0.5) để tính căn bậc hai của x.
+Enter 3 values for a, b, c and display the result based on the delta calculation.
+If delta> = 0, show 2 solutions. If delta is 0,
+Displays a solution (due to two equations).
+Left displays the string "The equation has no roots"
+Note: Use Math.pow (x, 0.5) to calculate the square root of x.
 
 */
 

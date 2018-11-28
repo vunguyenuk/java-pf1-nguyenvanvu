@@ -16,7 +16,7 @@ public class AlgorithmsComplexity {
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.println("Excution time for n = " + n
+        System.out.println("Execution time for n = " + n
             + " is " + (endTime - startTime) + " milliseconds");
 
     }

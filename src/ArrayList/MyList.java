@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class MyList<E> implements Cloneable{
     int size = 0;
     static int DEFAULT_CAPACITY = 10;
-    int count = 0; //su dung cai nay de tranh ConcurrentModificationException()
+    int count = 0; //ConcurrentModificationException()
     Object elements[];
 
     public MyList() {
@@ -16,7 +16,7 @@ public class MyList<E> implements Cloneable{
 
     public void add(int index, E element){
         if(index < 0 || index > size){
-            throw new IndexOutOfBoundsException("index khong hop le");
+            throw new IndexOutOfBoundsException("index is invalid");
         }
         ensureCapacity(10);
         System.arraycopy(elements, index, elements, index + 1,size-index);
@@ -32,7 +32,7 @@ public class MyList<E> implements Cloneable{
             }
             if(newCapacity < 0){
                 if(minCapacity < 0){
-                    throw new OutOfMemoryError("Ra ngoai bo nho");
+                    throw new OutOfMemoryError("index out of bound");
                 }
                 newCapacity = Integer.MAX_VALUE;
             }

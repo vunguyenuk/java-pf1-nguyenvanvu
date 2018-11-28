@@ -17,7 +17,7 @@ public class TestFileIO {
 
             System.out.println(dir.getAbsolutePath());
 
-             boolean isDeleted = f.delete() ? false : true;
+            boolean isDeleted = f.delete() ? false : true;
             System.out.println(isDeleted);
         }
     }

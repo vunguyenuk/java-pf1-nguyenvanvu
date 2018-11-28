@@ -1,18 +1,18 @@
 package OOP;
 /*
-1. Trường startTime và endTime là private với phương thức getter để trả về giá trị của startTime và endTime.
+The startTime and endTime fields are private with the getter method to return the values of startTime and endTime.
 
-2. Phương thức khởi tạo không tham số khởi tạo startTime với thời gian hiện tại của hệ thống.
+2. The initialization method does not initialize the startTime parameter with the current system time.
 
-3. Phương thức start() để reset startTime về thời gian hiện tại của hệ thống.
+The start () method to reset startTime to the current system time.
 
-4. Phương thức stop() để thiết đặt endTime về thời gian hiện tại của hệ thống.
+4. The stop () method to set endTime to the current time of the system.
 
-5. Phương thức getElapsedTime() trả về thời gian đã trôi qua theo số milisecond giây
+The getElapsedTime () method returns the elapsed time in milliseconds
 
-6. Vẽ sơ đồ UML cho lớp StopWatch và cài đặt lớp.
+6. Draw the UML diagram for the StopWatch class and install the class.
 
-7. Viết chương trình đo thời gian thực thi của thuật toán sắp xếp chọn (selection sort) cho 100,000 số.*/
+Write a program to measure the execution time of the selection sort algorithm for 100,000 numbers*/
 
 
 public class StopWatch {

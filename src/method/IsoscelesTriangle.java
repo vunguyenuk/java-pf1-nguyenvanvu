@@ -6,16 +6,16 @@ public class IsoscelesTriangle {
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
 
-        System.out.println("Nhap cac gia tri: ");
+        System.out.println("Enter values : ");
         double n1 = ip.nextDouble();
         double n2 = ip.nextDouble();
         double n3 = ip.nextDouble();
 
         if(isValid(n1, n2, n3)){
-            System.out.println("Ba canh co gia tri hop le");
-            System.out.println("in ra ba canh la: " +  myTriagle(n1, n2 , n3));
+            System.out.println("three edges with valid values");
+            System.out.println("print out three sides is: " +  myTriagle(n1, n2 , n3));
         } else {
-            System.out.println("Ba canh co gia tri khong hop le");
+            System.out.println("three edges with invalid values");
         }
     }
 

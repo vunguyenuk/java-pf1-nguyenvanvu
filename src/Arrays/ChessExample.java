@@ -10,7 +10,7 @@ public class ChessExample {
         Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < str.length; i++){
-            System.out.println("Nhap ky tu cho hang " + i + ": ");
+            System.out.println("Character of column " + i + ": ");
             str[i] = sc.next().charAt(0);
         }
 

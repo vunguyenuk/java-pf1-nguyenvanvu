@@ -1,18 +1,18 @@
 package AccessModifier;
 /*
-* (Lớp LocationTest) Thiết kế lớp tên là LocationTest chứa giá trị lớn nhất
-* và vị trí của nó trong mảng hai chiều. Lớp này chứa trường row,
-* column kiểu public int và maxValue kiểu public double lưu giá trị
-* lớn nhất trong mảng 2 chiều. Viết phương thức trả về vị trí
-* của phần tử có giá trị lớn nhất trong mảng hai chiếu.
-* Nguyên mẫu phương thức như sau:
+* (LocationTest class) Design a class named LocationTest that contains the largest value
+* and its position in the two-dimensional array. This class contains the row field,
+* columns of type int and maxValue of type public double save the value
+* largest in 2 dimensional array. Write the method returns the position
+* of the largest value in the two projection array.
+* Prototype protocols are as follows:
 
-public static LocationTest locateLargest(double[][] a)
+public static LocationTest locateLargest (double [] [] a)
 
-Phương thức locateLargest() trả về một instance của LocationTest.
-Viết chương trình cho phép người dùng nhập vào các giá trị
-cho một mảng hai chiều và hiển thị LocationTest của phần tử có
-giá trị lớn nhất trong mảng.
+The locateLargest () method returns an instance of LocationTest.
+Write program that allows the user to enter values
+for a two dimensional array and display the LocationTest of the element there
+the largest value in the array.
 */
 
 import java.util.Scanner;
@@ -31,7 +31,7 @@ public class LocationTest {
         System.out.println(l.toString());
 
     }
-    //lấy hàng và cột được nhập ở hàm main
+    //Get rows and columns entered in the main function
     public static double[][] getArray(int row, int col){
         Scanner sc = new Scanner(System.in);
         double[][] a = new double[row][col];

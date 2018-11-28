@@ -7,9 +7,9 @@ public class ReadAndWrite {
         File send = new File("src/Exception/National");
         File received = new File("src/Exception/Test");
         try{
-            if(received.exists()) throw new Exception("File cuoi ton tai lam on xoa no!");
+            if(received.exists()) throw new Exception("The receive file is exists. Please remove it!");
             else {
-                System.out.println("File cuoi da tu dong khoi tao!");
+                System.out.println("Last File is initial!");
                 BufferedReader read = new BufferedReader(new FileReader(send));
                 BufferedWriter writer = new BufferedWriter(new FileWriter(received));
                 String line = "";
@@ -24,9 +24,9 @@ public class ReadAndWrite {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("File khong tim thay: " + e.getMessage());
+            System.out.println("File not found: " + e.getMessage());
         } catch (IOException e) {
-            System.out.println("Loi Ngoai le: " + e.getMessage());
+            System.out.println("Exception error: " + e.getMessage());
         }
     }
 }

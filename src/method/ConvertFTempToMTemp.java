@@ -6,10 +6,10 @@ public class ConvertFTempToMTemp {
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
 
-        System.out.print("Nhap meter: ");
+        System.out.print("Enter meter: ");
         double mt = ip.nextDouble();
 
-        System.out.print("Nhap foot: ");
+        System.out.print("Enter foot: ");
         double ft = ip.nextDouble();
 
         convertMeterToFeet(mt);

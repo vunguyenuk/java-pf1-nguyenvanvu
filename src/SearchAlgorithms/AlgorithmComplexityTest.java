@@ -14,7 +14,7 @@ public class AlgorithmComplexityTest {
             frequentChar[ascii] += 1;
         }
 
-        //Tìm ký tự có tần suất xuất hiện nhiều nhất
+        //Find the characters with the most frequency
         int max = 0;
         char character = (char) 255;
         for(int j = 0; j < 255; j++){

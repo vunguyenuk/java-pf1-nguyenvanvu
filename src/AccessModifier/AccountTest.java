@@ -1,15 +1,15 @@
 package AccessModifier;
 
 /*
-* 13. Viết chương trình kiểm thử như sau:
+13. Write the test program as follows:
 
-+ Tạo đối tượng Account với ID là 1122, balance là $20,000, annual interest rate là 4.5%
++ Create account with ID 1122, balance is $ 20,000, annual interest rate is 4.5%
 
-+ Sử dụng phương thức withdraw để rút $2,5000 trong tài khoản
++ Use withdrawal to withdraw $ 2,5000 in your account
 
-+ Sử dụng phương thức deposit để gửi vào $3,000 vào tài khoản
++ Use the deposit method to deposit $ 3,000 into your account
 
-+ In ra số dư tài khoản, tiền lãi tháng và ngày tạo tài khoản
++ Print account balance, monthly interest and account creation date
 */
 
 import java.util.Scanner;

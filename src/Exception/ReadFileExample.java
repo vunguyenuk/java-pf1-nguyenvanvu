@@ -19,7 +19,7 @@ public class ReadFileExample {
                 sum += Integer.parseInt(line);
             }
             br.close();
-            System.out.println("Tong: " + sum);
+            System.out.println("Sum is: " + sum);
         } catch (Exception e) {
             System.out.println("Exception Error: " + e.getMessage());
         }

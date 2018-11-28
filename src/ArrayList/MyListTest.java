@@ -9,18 +9,18 @@ public class MyListTest {
         myList.add(3,"An");
         myList.add(4,"Hieu");
         myList.add(5,"Van");
-        System.out.println("---------------lay phan tu--------------");
+        System.out.println("---------------Get the element--------------");
         System.out.println(myList.get(2));
-        System.out.println("------------------lay kich thuoc mang---------------");
+        System.out.println("------------------Get the size---------------");
         System.out.println(myList.size());
-        System.out.println("-------------Gia tri xoa------------------");
+        System.out.println("-------------Delete value------------------");
         System.out.println("remove" + myList.remove(2));
-        System.out.println("---------Danh sach cac phan tu trong mang------------");
+        System.out.println("---------List of elements in array------------");
         myList.show();
-        System.out.println("----------Clone phan tu trong mang---------------------");
+        System.out.println("----------Clone elements from array---------------------");
         MyList myList1 = (MyList<String>) myList.clone();
         myList1.show();
-        System.out.println("----------clear cac phan tu trong mang------------");
+        System.out.println("----------clear elements------------");
         myList.clear();
         myList.show();
     }

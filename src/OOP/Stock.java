@@ -1,24 +1,26 @@
 package OOP;
 
 /*
-1. Trường dữ liệu thuộc kiểu String là symbol lưu mã cổ phiếu symbol.
+1. A data field of type String is a symbol that stores symbol stocks.
 
-2. Trường name có kiểu dữ liệu là String lưu tên cô phiếu
+2. The name field contains the data type is String save the name of the vote
 
-3. Trường dữ liệu previousClosingPrice có kiểu dữ liệu double lưu giá cổ phiếu của ngày trước đó
+3. The previousClosingPrice data field has a double data type that stores the previous day's stock price
 
-4. Trường dữ liệu currentPrice có kiểu dữ liệu double lưu giá cổ phiếu hiện tại
+4. The currentPrice data field has a double data type that stores current stock prices
 
-5. Constructor để tạo đối tượngn cổ phiếu với symbol và name cho trước
+5. Constructor to create a stock object with a given symbol and name
 
-6. Phương thức getChangePercent() trả về tỉ lệ phần trăm thay đổi từ previousClosingPrice đến currentPrice.
+The getChangePercent () method returns the percentage change from previousClosingPrice to currentPrice.
 
-7. Vẽ sơ đồ UML cho lớp Stock và sau đó cài đặt lớp.
+7. Draw the UML diagram for the Stock layer and then install the layer.
 
-8. Viết chương trình kiểm thử như sau:
+8. Write the test program as follows:
 
-Tạo đối tượng Stock với symbol là ORCL và name là Oracle Corporation,
-previousClosingPrice là 34.5. Đặt currentPrice là 34.35 và hiển thị tỉ lệ phần trăm thay đổi giá.*/
+Create a Stock object with the symbol ORCL and name Oracle Corporation,
+previousClosingPrice is 34.5. Set the currentPrice to 34.35 and display the percentage change in price.
+*/
+
 public class Stock {
     public String symbol = "symbol";
     public String stockName;

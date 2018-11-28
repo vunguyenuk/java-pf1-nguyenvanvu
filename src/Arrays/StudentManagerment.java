@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class StudentManagerment {
     public static void main(String[] args) {
-        int[] diemSinhVien = new int[3];
+        int[] scoreStudent = new int[3];
 
-        for(int i = 0; i < diemSinhVien.length; i++){
+        for(int i = 0; i < scoreStudent.length; i++){
             Scanner sc = new Scanner(System.in);
-            System.out.println("Nhap diem sinh vien thu " + i + ": ");
-            diemSinhVien[i] = sc.nextInt();
+            System.out.println("Enter student score of turn " + i + ": ");
+            scoreStudent[i] = sc.nextInt();
 
         }
-        for(int i = 0; i < diemSinhVien.length; i++ ){
-            System.out.println("diem sinh vien thu " + i + " la: " + diemSinhVien[i]);
+        for(int i = 0; i < scoreStudent.length; i++ ){
+            System.out.println("Enter student score of turn " + i + " is: " + scoreStudent[i]);
         }
 
 

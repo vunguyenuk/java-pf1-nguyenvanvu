@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SortDecrementPrime {
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
-        System.out.println("Nhap cac so lan luot: ");
+        System.out.println("enter the numbers in turn: ");
         double number1 = ip.nextDouble();
         double number2 = ip.nextDouble();
         double number3 = ip.nextDouble();

@@ -2,11 +2,11 @@ package method;
 
 public class ShowString {
     public static void main(String[] args) {
-        String c = nhapChuoi("Heloo", "world");
+        String c = enterString("Heloo", "world");
         System.out.println(c);
     }
 
-    public static String nhapChuoi(String chuoi1, String chuoi2){
-        return chuoi1 + " " + chuoi2;
+    public static String enterString(String str1, String str2){
+        return str1 + " " + str2;
     }
 }

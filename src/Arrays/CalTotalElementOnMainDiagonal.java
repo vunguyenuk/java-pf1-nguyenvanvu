@@ -5,32 +5,32 @@ import java.util.Scanner;
 
 public class CalTotalElementOnMainDiagonal {
     public static void main(String[] args) {
-        int soDong, soCot, Sum = 0;
+        int numberOfColumn, numberOfRow, Sum = 0;
 
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Nhap vao so dong cua mang: ");
-        soDong = input.nextInt();
+        System.out.println("Enter row's number of array: ");
+        numberOfColumn = input.nextInt();
 
-        System.out.println("Nhap vao so cot cua mang: ");
-        soCot = input.nextInt();
+        System.out.println("Enter col's number of array: ");
+        numberOfRow = input.nextInt();
 
-        int[][] matrix = new int[soDong][soCot];
+        int[][] matrix = new int[numberOfColumn][numberOfRow];
 
 
-        System.out.println("mang vua nhap: ");
-        for (int i = 0; i < soDong; i++){
-            for(int j = 0; j < soCot; j++) {
-                System.out.print("Nhap phan thu thu [" + i + ", " + j + "]: ");
+        System.out.println("Array just enter: ");
+        for (int i = 0; i < numberOfColumn; i++){
+            for(int j = 0; j < numberOfRow; j++) {
+                System.out.print("enter index of turn [" + i + ", " + j + "]: ");
                 matrix[i][j] = input.nextInt();
             }
         }
 
-        System.out.println("tinh tong ham cheo cua ma tran");
-        for (int i = 0; i < soCot; i++ ){
+        System.out.println("Sum of matrix");
+        for (int i = 0; i < numberOfRow; i++ ){
             Sum += matrix[i][i];
         }
-        System.out.println("tong la: " + Sum);
+        System.out.println("sum is: " + Sum);
     }
 }

@@ -15,6 +15,6 @@ public class SmallestElementInArray {
                 min = a[i];
             }
         }
-        System.out.println("min la: " + min);
+        System.out.println("min is: " + min);
     }
 }

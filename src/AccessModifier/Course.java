@@ -1,19 +1,19 @@
 package AccessModifier;
 
 /*
-* Kích thước mảng được cố định là 100.
-* Cải thiện nó để tự động tăng kích thước mảng bằng cách tạo
-* một mảng mới lớn hơn và sao chép nội dung của mảng hiện tại vào nó.
+The array size is fixed to 100.
+* Improved it to automatically increase the array size by creating
+* a bigger new array and copy the contents of the current array into it.
 
-Thực thi phương thức dropStudent. Xác định phương thức này là static.
+Executes the dropStudent method. Determine which method is static.
 
-Thêm một phương thức mới có tên clear()
-để loại bỏ tất cả sinh viên khỏi khóa học.
-Xác định phương thức này là static.
+Add a new method called clear ()
+to remove all students from the course.
+Determine which method is static.
 
-Viết một chương trình kiểm tra như sau:
-tạo một khóa học, thêm vào ba sinh viên,
-loại bỏ một sinh viên, và hiển thị các sinh viên trong khóa học.
+Write a test program as follows:
+Create a course, in addition to three students,
+Eliminate a student, and show the students in the course.
 * */
 
 public class Course {

@@ -8,7 +8,7 @@ public class ReadFile {
             File file = new File("src/Exception/National");
             BufferedReader bf = new BufferedReader(new FileReader(file));
             String line = "";
-            while ((line = bf.readLine())!= null){
+            while ((line = bf.readLine()) != null){
                 String[] country = line.split(",");
                 System.out.println(country[5]);
             }

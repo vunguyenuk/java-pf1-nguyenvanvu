@@ -1,3 +1,5 @@
+package HomeWorkOnClass;
+
 public class SumOfElementInArray {
     public static void main(String[] args) {
         int[] num = { 5, 2, 3, 7, 14 };

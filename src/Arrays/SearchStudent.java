@@ -4,24 +4,24 @@ import java.util.Scanner;
 
 public class SearchStudent {
     public static void main(String[] args) {
-        String[] tenSinhVien = {"Vu", "Loc", "Hop", "Van"};
+        String[] nameStudents = {"Vu", "Loc", "Hop", "Van"};
 
-        String tenCanTim;
+        String nameYouFind;
         Scanner write = new Scanner(System.in);
-        System.out.println("Nhap ten sinh vien can tim: ");
-        tenCanTim = write.nextLine();
+        System.out.println("Enter name of student: ");
+        nameYouFind = write.nextLine();
 
-        boolean tonTai = false;
+        boolean isExist = false;
 
-        for(String ten : tenSinhVien) {
-            if (ten.equals(tenCanTim)) {
+        for(String name : nameStudents) {
+            if (name.equals(nameYouFind)) {
 
-                tonTai = true;
-                System.out.println("Ten nay co trong danh sach va nam o vi tri thu: " + ten);
+                isExist = true;
+                System.out.println("This name is in the list and is in the position: " + name);
             }
         }
-        if(!tonTai){
-            System.out.println("khong co sinh vien " + tenCanTim + " nao duoc tim thay");
+        if(!isExist){
+            System.out.println("No of student " + nameYouFind + " is found");
         }
     }
 }

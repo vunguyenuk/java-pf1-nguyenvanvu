@@ -11,13 +11,13 @@ public class Cylinder {
         int height = sc.nextInt();
 
         double baseArea = getBaseArea(radius);
-        System.out.println("dien tich day: " + baseArea);
+        System.out.println("bottom area: " + baseArea);
 
         double perimeter = getPerimeter(radius);
-        System.out.println("chu vi: " + perimeter);
+        System.out.println("perimeter: " + perimeter);
 
         double volume = getVolume(radius, height);
-        System.out.println("The tich: " + volume);
+        System.out.println("volume: " + volume);
     }
 
     public static double getBaseArea(int radius){

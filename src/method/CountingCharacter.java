@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class CountingCharacter {
     public static void main(String[] args) {
         Scanner c = new Scanner(System.in);
-        System.out.println("Nhap vo doan ky tu: ");
-        String chuoi = c.nextLine();
+        System.out.println("Enter the characters: ");
+        String str = c.nextLine();
 
-        demChuoi(chuoi);
+        demChuoi(str);
     }
 
     public static void demChuoi(String chuoi){
@@ -18,6 +18,6 @@ public class CountingCharacter {
                 countString++;
             }
         }
-        System.out.println("Do dai chuoi la: " + countString);
+        System.out.println("String's length: " + countString);
     }
 }
