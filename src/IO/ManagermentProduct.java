@@ -1,4 +1,4 @@
-package FileAndSerialization;
+package IO;
 
 import java.io.*;
 
@@ -7,32 +7,32 @@ public class ManagermentProduct {
         PrintWriter pw = null;
         try{
           pw = new PrintWriter(new FileOutputStream(source), true);
-          pw.append(str);
+          pw.write(str);
         } finally {
             pw.close();
         }
     }
 
     public static void copySourceToDestination(File soure, File dest) throws Exception{
-        FileInputStream is = null;
-        FileOutputStream os = null;
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
         try{
-            is = new FileInputStream(soure);
-            os = new FileOutputStream(dest);
+            fis = new FileInputStream(soure);
+            fos = new FileOutputStream(dest);
             byte[] bytes = new byte[1024];
             int line;
-            while ((line = is.read(bytes)) > 0){
-                os.write(bytes, 0, line);
+            while ((line = fis.read(bytes)) > 0){
+                fos.write(bytes, 0, line);
             }
         } finally {
-            is.close();
-            os.close();
+            fis.close();
+            fos.close();
         }
     }
 
     public static void main(String[] args) {
-        String sourcePath = "src/FileAndSerialization/TestInput";
-        String destPath = "src/FileAndSerialization/TestOutput";
+        String sourcePath = "src/IO/TestInput";
+        String destPath = "src/IO/TestOutput";
         String str = "nameProduct: \"orange\", quantity: 120;\n" +
                     "nameProduct: \"grape\", quantity: 123;\n" +
                     "nameProduct: \"tangerines\", quantity: 121; \n" +

@@ -1,9 +1,8 @@
-package FileAndSerialization;
+package IO;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.util.Scanner;
 
 public class ManagermentCustomer {
     private static void copyFileUsingJava7Files(File source, File dest) throws IOException {
@@ -28,8 +27,8 @@ public class ManagermentCustomer {
     }
 
     public static void main(String[] args) {
-        String sourcePath = "src/FileAndSerialization/TestInput";
-        String destPath = "src/FileAndSerialization/TestOutput";
+        String sourcePath = "src/IO/TestInput";
+        String destPath = "src/IO/TestOutput";
 
         File sourceFile = new File(sourcePath);
         File destFile = new File(destPath);

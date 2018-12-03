@@ -1,4 +1,4 @@
-package FileAndSerialization;
+package IO;
 
 import java.io.*;
 
@@ -25,8 +25,8 @@ public class CopyFileBinary {
     }
 
     public static void main(String[] args) throws Exception {
-        String source = "src/FileAndSerialization/SourceFile";
-        String dest = "src/FileAndSerialization/DestFile";
+        String source = "src/IO/SourceFile";
+        String dest = "src/IO/DestFile";
 
         File sourceFile = new File(source);
         File destFile = new File(dest);

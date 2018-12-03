@@ -2,7 +2,7 @@ package Exception;
 
 import java.io.*;
 
-public class ReadFileExample {
+public class sumElementsInFile {
     public void readFileText(){
         try{
             File file = new File("src/Exception/numbers");
@@ -27,7 +27,7 @@ public class ReadFileExample {
     }
 
     public static void main(String[] args) {
-        ReadFileExample readFileExample = new ReadFileExample();
+        sumElementsInFile readFileExample = new sumElementsInFile();
         readFileExample.readFileText();
     }
 }
