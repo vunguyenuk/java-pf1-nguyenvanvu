@@ -13,7 +13,7 @@ public class DemoSerialization {
         try{
             FileOutputStream fos = new FileOutputStream("src/IO/TestObjectIO");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(student);
+            oos.writeObject(student.getName());
             System.out.println("Write file is success");
         }catch(IOException e){
             e.printStackTrace();
