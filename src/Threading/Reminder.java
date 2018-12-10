@@ -30,15 +30,15 @@ public class Reminder {
         @Override
         public void run() {
             System.out.println("Time's up!");
-            timer.cancel();
             System.exit(0);
+            timer.cancel();
+
         }
     }
 
     public static void main(String[] args){
         RunNumber runNumber = new RunNumber();
-        int second = 5;
         runNumber.start();
-        new Reminder(second);
+        new Reminder(5);
     }
 }
