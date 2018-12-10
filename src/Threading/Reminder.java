@@ -26,13 +26,12 @@ public class Reminder {
        }
     }
 
-
     public class ReminderTask extends TimerTask {
         @Override
         public void run() {
             System.out.println("Time's up!");
             timer.cancel();
-            System.exit(1);
+            System.exit(0);
         }
     }
 
@@ -41,6 +40,5 @@ public class Reminder {
         int second = 5;
         runNumber.start();
         new Reminder(second);
-
     }
 }
