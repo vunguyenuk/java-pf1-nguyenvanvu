@@ -9,7 +9,7 @@ public class StopThread implements Runnable {
     for(int i = 1; i < 100; i++){
       System.out.println(i);
       try {
-        Thread.sleep(100 + random.nextInt(800));
+        Thread.sleep(random.nextInt(800) + 100);
       } catch (InterruptedException e) {
         System.out.println("Time's up");
         break;
