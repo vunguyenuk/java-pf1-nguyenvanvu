@@ -1,12 +1,15 @@
 package Threading;
 
+import java.util.Random;
+
 public class StopThread implements Runnable {
   @Override
   public void run() {
+    Random random = new Random();
     for(int i = 1; i < 100; i++){
       System.out.println(i);
       try {
-        Thread.sleep(100,900);
+        Thread.sleep(100 + random.nextInt(800));
       } catch (InterruptedException e) {
         System.out.println("Time's up");
         break;
